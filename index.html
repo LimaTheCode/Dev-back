@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessibilidade</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="content">
+
+        <h1>Menu de Acessibilidade</h1>
+
+        <p>
+            Exemplo de menu moderno de acessibilidade com:
+            modo escuro, contraste, aumento de texto,
+            redução de animações e filtros para daltonismo.
+        </p>
+
+    </main>
+
+    <!-- BOTÃO FLUTUANTE -->
+
+    <button
+        class="accessibility-btn"
+        id="openAccessibility">
+
+        ⚙
+
+    </button>
+
+    <!-- POPUP -->
+
+    <aside
+        class="accessibility-popup"
+        id="popup">
+
+        <div class="popup-header">
+
+            <h2>Acessibilidade</h2>
+
+            <button
+                class="close-btn"
+                id="closeAccessibility">
+
+                ✕
+
+            </button>
+
+        </div>
+
+        <!-- MODO ESCURO -->
+
+        <div class="option">
+
+            <span>Modo Escuro</span>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="darkModeToggle">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <!-- CONTRASTE -->
+
+        <div class="option">
+
+            <span>Contraste Alto</span>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="contrastToggle">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <!-- ANIMAÇÕES -->
+
+        <div class="option">
+
+            <span>Remover Animações</span>
+
+            <label class="switch">
+
+                <input
+                    type="checkbox"
+                    id="motionToggle">
+
+                <span class="slider"></span>
+
+            </label>
+
+        </div>
+
+        <!-- TEXTO -->
+
+        <div class="font-box">
+
+            <div class="font-header">
+
+                <span>Tamanho do Texto</span>
+
+                <strong id="fontValue">
+                    100%
+                </strong>
+
+            </div>
+
+            <input
+                type="range"
+                min="80"
+                max="170"
+                value="100"
+                id="fontSlider"
+                class="range-slider">
+
+        </div>
+
+        <!-- FILTROS -->
+
+        <div class="filter-section">
+
+            <div class="filter-header">
+                Filtro Daltonismo
+            </div>
+
+            <select
+                id="colorFilter"
+                class="filter-select">
+
+                <option value="normal">
+                    Normal
+                </option>
+
+                <option value="protanopia">
+                    Protanopia
+                </option>
+
+                <option value="deuteranopia">
+                    Deuteranopia
+                </option>
+
+                <option value="tritanopia">
+                    Tritanopia
+                </option>
+
+                <option value="grayscale">
+                    Escala de Cinza
+                </option>
+
+            </select>
+
+        </div>
+
+        <!-- CORES -->
+
+        <div class="colorblind-section">
+
+            <span class="colorblind-title">
+                Identificação de Cores
+            </span>
+
+            <div class="colorblind-list">
+
+                <div class="color-item">
+
+                    <div class="color-dot red"></div>
+                    <span>Vermelho</span>
+
+                </div>
+
+                <div class="color-item">
+
+                    <div class="color-dot green"></div>
+                    <span>Verde</span>
+
+                </div>
+
+                <div class="color-item">
+
+                    <div class="color-dot blue"></div>
+                    <span>Azul</span>
+
+                </div>
+
+                <div class="color-item">
+
+                    <div class="color-dot yellow"></div>
+                    <span>Amarelo</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- FILTROS SVG -->
+
+    <svg style="display:none">
+
+        <filter id="protanopia">
+
+            <feColorMatrix
+                type="matrix"
+                values="
+                0.567 0.433 0     0 0
+                0.558 0.442 0     0 0
+                0     0.242 0.758 0 0
+                0     0     0     1 0"/>
+
+        </filter>
+
+        <filter id="deuteranopia">
+
+            <feColorMatrix
+                type="matrix"
+                values="
+                0.625 0.375 0   0 0
+                0.7   0.3   0   0 0
+                0     0.3   0.7 0 0
+                0     0     0   1 0"/>
+
+        </filter>
+
+        <filter id="tritanopia">
+
+            <feColorMatrix
+                type="matrix"
+                values="
+                0.95 0.05  0     0 0
+                0    0.433 0.567 0 0
+                0    0.475 0.525 0 0
+                0    0     0     1 0"/>
+
+        </filter>
+
+    </svg>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
