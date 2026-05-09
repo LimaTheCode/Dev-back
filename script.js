@@ -26,7 +26,7 @@ openBtn.addEventListener(
     }
 );
 
-/* FECHAR */
+/* Fechar o botão */
 
 closeBtn.addEventListener(
     "click",
@@ -39,7 +39,7 @@ closeBtn.addEventListener(
     }
 );
 
-/* FECHAR FORA */
+/* Fechar fora o botão */
 
 document.addEventListener(
     "click",
@@ -65,7 +65,7 @@ document.addEventListener(
     }
 );
 
-/* TOGGLES */
+/* Botões toggle */
 
 const darkModeToggle =
     document.getElementById(
@@ -82,7 +82,7 @@ const motionToggle =
         "motionToggle"
     );
 
-/* DARK MODE */
+/* Modo escuro */
 
 darkModeToggle.addEventListener(
     "change",
@@ -95,7 +95,7 @@ darkModeToggle.addEventListener(
     }
 );
 
-/* CONTRASTE */
+/* Modo contraste alto */
 
 contrastToggle.addEventListener(
     "change",
@@ -108,7 +108,7 @@ contrastToggle.addEventListener(
     }
 );
 
-/* MOTION */
+/* Animação */
 
 motionToggle.addEventListener(
     "change",
@@ -121,7 +121,7 @@ motionToggle.addEventListener(
     }
 );
 
-/* TEXTO */
+/* Mudar o tamanho do texto */
 
 const fontSlider =
     document.getElementById(
@@ -149,7 +149,7 @@ fontSlider.addEventListener(
     }
 );
 
-/* FILTROS */
+/* Filtros de cores */
 
 const colorFilter =
     document.getElementById(
