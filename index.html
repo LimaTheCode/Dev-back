@@ -1,26 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acessibilidade</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Techome</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
 </head>
+
 <body>
 
-    <main class="content">
-        <h1>Menu de Acessibilidade</h1>
+    <div id="siteContent">
 
-        <p>
-            Exemplo de menu moderno de acessibilidade com:
-            modo escuro, contraste, aumento de texto,
-            redução de animações e filtros para daltonismo.
-        </p>
-        
-    </main>
+        <header class="navbar">
 
-    <!-- Botão interativo flutuante -->
+            <div class="logo">
+                TECHOME
+            </div>
+
+            <nav>
+
+                <ul class="nav-links">
+
+                    <li>
+                        <a href="#">
+                            SOBRE
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            NOTÍCIAS
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            CONTATO
+                        </a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <input
+                type="text"
+                placeholder="Pesquisar..."
+                class="search-box">
+
+        </header>
+
+        <section class="hero">
+
+            <h1>
+                Tecnologia, Games e Segurança Digital
+            </h1>
+
+            <p>
+                Notícias minimalistas sobre inovação,
+                inteligência artificial, segurança
+                e o universo gamer.
+            </p>
+
+        </section>
+
+        <main class="news-grid">
+
+            <article class="card">
+
+                <img
+                    src="img/noticia 1.avif"
+                    alt="Homem encapuzado digitando em notebook">
+
+                <div class="card-content">
+
+                    <h2>
+                        Cibercriminosos roubam dados
+                        de 275 milhões de usuários
+                        do Canvas
+                    </h2>
+
+                    <p>
+                        Grupo ShinyHunters assumiu o ataque
+                        e ameaça divulgar 3,65 TB de dados
+                        de escolas, universidades e empresas.
+                    </p>
+
+                    <button class="readmore">
+                        Ler mais
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article class="card">
+
+                <img
+                    src="img/noticia 2.webp"
+                    alt="iPhones alinhados em fundo escuro">
+
+                <div class="card-content">
+
+                    <h2>
+                        Youtuber processado pela Apple
+                        vaza tudo do iPhone 18 Pro
+                    </h2>
+
+                    <p>
+                        Novo aparelho pode trazer câmera
+                        com abertura variável, maior bateria
+                        e mudanças na Dynamic Island.
+                    </p>
+
+                    <button class="readmore">
+                        Ler mais
+                    </button>
+
+                </div>
+
+            </article>
+
+            <article class="card">
+
+                <img
+                    src="img/noticia 3.webp"
+                    alt="Personagem cyberpunk em fundo rosa">
+
+                <div class="card-content">
+
+                    <h2>
+                        Dead as Disco mistura pancadaria
+                        com música e viraliza na Steam
+                    </h2>
+
+                    <p>
+                        O game combina ritmo musical com
+                        combate intenso e já se destaca
+                        entre os jogos independentes.
+                    </p>
+
+                    <button class="readmore">
+                        Ler mais
+                    </button>
+
+                </div>
+
+            </article>
+
+        </main>
+
+        <footer class="footer">
+
+            <div>
+                <strong>
+                    TECHOME
+                </strong>
+            </div>
+
+            <div>
+                Fortaleza - CE
+            </div>
+
+            <div class="footer-contact">
+
+                <span>
+                    85 99999-9999
+                </span>
+
+                <span>
+                    contato@techome.com
+                </span>
+
+            </div>
+
+            <div class="socials">
+
+                <i class="fa-brands fa-instagram"></i>
+
+                <i class="fa-brands fa-facebook-f"></i>
+
+                <i class="fa-brands fa-linkedin-in"></i>
+
+            </div>
+
+        </footer>
+
+    </div>
 
     <button
         class="accessibility-btn"
@@ -30,15 +210,15 @@
 
     </button>
 
-    <!-- Menu Pop-Up -->
-
     <aside
         class="accessibility-popup"
         id="popup">
 
         <div class="popup-header">
 
-            <h2>Acessibilidade</h2>
+            <h2>
+                Acessibilidade
+            </h2>
 
             <button
                 class="close-btn"
@@ -47,13 +227,14 @@
                 ✕
 
             </button>
-        </div>
 
-        <!-- Modo escuro -->
+        </div>
 
         <div class="option">
 
-            <span>Modo Escuro</span>
+            <span>
+                Modo Escuro
+            </span>
 
             <label class="switch">
 
@@ -67,11 +248,11 @@
 
         </div>
 
-        <!-- Contraste maior -->
-
         <div class="option">
 
-            <span>Contraste Alto</span>
+            <span>
+                Contraste Alto
+            </span>
 
             <label class="switch">
 
@@ -85,11 +266,11 @@
 
         </div>
 
-        <!-- Removedor de animaçãoq -->
-
         <div class="option">
 
-            <span>Remover Animações</span>
+            <span>
+                Remover Animações
+            </span>
 
             <label class="switch">
 
@@ -103,12 +284,13 @@
 
         </div>
 
-        <!-- Alternar tamanho do texto -->
         <div class="font-box">
 
             <div class="font-header">
 
-                <span>Tamanho do Texto</span>
+                <span>
+                    Tamanho do Texto
+                </span>
 
                 <strong id="fontValue">
                     100%
@@ -125,8 +307,6 @@
                 class="range-slider">
 
         </div>
-
-        <!-- Filtros de daltonismo -->
 
         <div class="filter-section">
 
@@ -162,93 +342,59 @@
 
         </div>
 
-        <!-- Dizer quais cores tão ativas -->
-
-        <div class="colorblind-section">
-
-            <span class="colorblind-title">
-                Identificação de Cores
-            </span>
-
-            <div class="colorblind-list">
-
-                <div class="color-item">
-
-                    <div class="color-dot red"></div>
-                    <span>Vermelho</span>
-
-                </div>
-
-                <div class="color-item">
-
-                    <div class="color-dot green"></div>
-                    <span>Verde</span>
-
-                </div>
-
-                <div class="color-item">
-
-                    <div class="color-dot blue"></div>
-                    <span>Azul</span>
-
-                </div>
-
-                <div class="color-item">
-
-                    <div class="color-dot yellow"></div>
-                    <span>Amarelo</span>
-
-                </div>
-
-            </div>
-
-        </div>
-
     </aside>
 
-    <!-- Filtros SVG -->
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        version="1.1"
+        width="0"
+        height="0"
+        style="position:absolute">
 
-    <svg style="display:none">
+        <defs>
 
-        <filter id="protanopia">
+            <filter id="protanopia">
 
-            <feColorMatrix
-                type="matrix"
-                values="
-                0.567 0.433 0     0 0
-                0.558 0.442 0     0 0
-                0     0.242 0.758 0 0
-                0     0     0     1 0"/>
+                <feColorMatrix
+                    type="matrix"
+                    values="
+                    0.567 0.433 0     0 0
+                    0.558 0.442 0     0 0
+                    0     0.242 0.758 0 0
+                    0     0     0     1 0"/>
 
-        </filter>
+            </filter>
 
-        <filter id="deuteranopia">
+            <filter id="deuteranopia">
 
-            <feColorMatrix
-                type="matrix"
-                values="
-                0.625 0.375 0   0 0
-                0.7   0.3   0   0 0
-                0     0.3   0.7 0 0
-                0     0     0   1 0"/>
+                <feColorMatrix
+                    type="matrix"
+                    values="
+                    0.625 0.375 0 0 0
+                    0.7   0.3   0 0 0
+                    0     0.3   0.7 0 0
+                    0     0     0 1 0"/>
 
-        </filter>
+            </filter>
 
-        <filter id="tritanopia">
+            <filter id="tritanopia">
 
-            <feColorMatrix
-                type="matrix"
-                values="
-                0.95 0.05  0     0 0
-                0    0.433 0.567 0 0
-                0    0.475 0.525 0 0
-                0    0     0     1 0"/>
+                <feColorMatrix
+                    type="matrix"
+                    values="
+                    0.95 0.05  0     0 0
+                    0    0.433 0.567 0 0
+                    0    0.475 0.525 0 0
+                    0    0     0     1 0"/>
 
-        </filter>
+            </filter>
+
+        </defs>
 
     </svg>
 
     <script src="script.js"></script>
 
 </body>
+
 </html>
