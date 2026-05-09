@@ -1,204 +1,331 @@
 const openBtn =
-    document.getElementById(
-        "openAccessibility"
-    );
+document.getElementById(
+"openAccessibility"
+);
 
 const closeBtn =
-    document.getElementById(
-        "closeAccessibility"
-    );
+document.getElementById(
+"closeAccessibility"
+);
 
 const popup =
-    document.getElementById(
-        "popup"
-    );
+document.getElementById(
+"popup"
+);
 
-/* ABRIR */
+const siteContent =
+document.getElementById(
+"siteContent"
+);
 
 openBtn.addEventListener(
-    "click",
-    () => {
+"click",
+() => {
 
-        popup.classList.toggle(
-            "active"
-        );
-
-    }
+popup.classList.toggle(
+"active"
 );
 
-/* Fechar o botão */
+}
+);
 
 closeBtn.addEventListener(
-    "click",
-    () => {
+"click",
+() => {
 
-        popup.classList.remove(
-            "active"
-        );
-
-    }
+popup.classList.remove(
+"active"
 );
 
-/* Fechar fora o botão */
+}
+);
 
 document.addEventListener(
-    "click",
-    (e) => {
+"click",
+(e) => {
 
-        const insidePopup =
-            popup.contains(e.target);
+const clickedPopup =
+popup.contains(e.target);
 
-        const insideButton =
-            openBtn.contains(e.target);
+const clickedButton =
+openBtn.contains(e.target);
 
-        if (
-            !insidePopup &&
-            !insideButton
-        ) {
+if (
+!clickedPopup &&
+!clickedButton
+) {
 
-            popup.classList.remove(
-                "active"
-            );
-
-        }
-
-    }
+popup.classList.remove(
+"active"
 );
 
-/* Botões toggle */
+}
+
+}
+);
 
 const darkModeToggle =
-    document.getElementById(
-        "darkModeToggle"
-    );
+document.getElementById(
+"darkModeToggle"
+);
 
 const contrastToggle =
-    document.getElementById(
-        "contrastToggle"
-    );
+document.getElementById(
+"contrastToggle"
+);
 
 const motionToggle =
-    document.getElementById(
-        "motionToggle"
-    );
-
-/* Modo escuro */
+document.getElementById(
+"motionToggle"
+);
 
 darkModeToggle.addEventListener(
-    "change",
-    () => {
+"change",
+() => {
 
-        document.body.classList.toggle(
-            "dark-mode"
-        );
-
-    }
+document.body.classList.toggle(
+"dark-mode"
 );
 
-/* Modo contraste alto */
+saveSettings();
+
+}
+);
 
 contrastToggle.addEventListener(
-    "change",
-    () => {
+"change",
+() => {
 
-        document.body.classList.toggle(
-            "high-contrast"
-        );
-
-    }
+document.body.classList.toggle(
+"high-contrast"
 );
 
-/* Animação */
+saveSettings();
+
+}
+);
 
 motionToggle.addEventListener(
-    "change",
-    () => {
+"change",
+() => {
 
-        document.body.classList.toggle(
-            "reduce-motion"
-        );
-
-    }
+document.body.classList.toggle(
+"reduce-motion"
 );
 
-/* Mudar o tamanho do texto */
+saveSettings();
+
+}
+);
 
 const fontSlider =
-    document.getElementById(
-        "fontSlider"
-    );
+document.getElementById(
+"fontSlider"
+);
 
 const fontValue =
-    document.getElementById(
-        "fontValue"
-    );
+document.getElementById(
+"fontValue"
+);
 
 fontSlider.addEventListener(
-    "input",
-    () => {
+"input",
+() => {
 
-        const size =
-            fontSlider.value;
+const size =
+fontSlider.value;
 
-        document.documentElement.style.fontSize =
-            size + "%";
+document.documentElement.style.fontSize =
+size + "%";
 
-        fontValue.textContent =
-            size + "%";
+fontValue.textContent =
+size + "%";
 
-    }
+saveSettings();
+
+}
 );
-
-/* Filtros de cores */
 
 const colorFilter =
-    document.getElementById(
-        "colorFilter"
-    );
+document.getElementById(
+"colorFilter"
+);
 
 colorFilter.addEventListener(
-    "change",
-    () => {
+"change",
+() => {
 
-        const filter =
-            colorFilter.value;
+const filter =
+colorFilter.value;
 
-        switch(filter) {
+switch(filter) {
 
-            case "protanopia":
+case "protanopia":
 
-                document.body.style.filter =
-                    "url(#protanopia)";
+siteContent.style.filter =
+"url(#protanopia)";
 
-            break;
+break;
 
-            case "deuteranopia":
+case "deuteranopia":
 
-                document.body.style.filter =
-                    "url(#deuteranopia)";
+siteContent.style.filter =
+"url(#deuteranopia)";
 
-            break;
+break;
 
-            case "tritanopia":
+case "tritanopia":
 
-                document.body.style.filter =
-                    "url(#tritanopia)";
+siteContent.style.filter =
+"url(#tritanopia)";
 
-            break;
+break;
 
-            case "grayscale":
+case "grayscale":
 
-                document.body.style.filter =
-                    "grayscale(100%)";
+siteContent.style.filter =
+"grayscale(100%)";
 
-            break;
+break;
 
-            default:
+default:
 
-                document.body.style.filter =
-                    "none";
+siteContent.style.filter =
+"none";
 
-        }
+}
 
-    }
+saveSettings();
+
+}
 );
+
+function saveSettings() {
+
+const settings = {
+
+darkMode:
+darkModeToggle.checked,
+
+contrast:
+contrastToggle.checked,
+
+motion:
+motionToggle.checked,
+
+fontSize:
+fontSlider.value,
+
+colorFilter:
+colorFilter.value
+
+};
+
+localStorage.setItem(
+"accessibilitySettings",
+JSON.stringify(settings)
+);
+
+}
+
+function loadSettings() {
+
+const savedSettings =
+JSON.parse(
+localStorage.getItem(
+"accessibilitySettings"
+)
+);
+
+if (!savedSettings) return;
+
+if (savedSettings.darkMode) {
+
+darkModeToggle.checked = true;
+
+document.body.classList.add(
+"dark-mode"
+);
+
+}
+
+if (savedSettings.contrast) {
+
+contrastToggle.checked = true;
+
+document.body.classList.add(
+"high-contrast"
+);
+
+}
+
+if (savedSettings.motion) {
+
+motionToggle.checked = true;
+
+document.body.classList.add(
+"reduce-motion"
+);
+
+}
+
+if (savedSettings.fontSize) {
+
+fontSlider.value =
+savedSettings.fontSize;
+
+fontValue.textContent =
+savedSettings.fontSize + "%";
+
+document.documentElement.style.fontSize =
+savedSettings.fontSize + "%";
+
+}
+
+if (savedSettings.colorFilter) {
+
+colorFilter.value =
+savedSettings.colorFilter;
+
+switch(savedSettings.colorFilter) {
+
+case "protanopia":
+
+siteContent.style.filter =
+"url(#protanopia)";
+
+break;
+
+case "deuteranopia":
+
+siteContent.style.filter =
+"url(#deuteranopia)";
+
+break;
+
+case "tritanopia":
+
+siteContent.style.filter =
+"url(#tritanopia)";
+
+break;
+
+case "grayscale":
+
+siteContent.style.filter =
+"grayscale(100%)";
+
+break;
+
+default:
+
+siteContent.style.filter =
+"none";
+
+}
+
+}
+
+}
+
+loadSettings();
