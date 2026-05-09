@@ -18,7 +18,7 @@ body {
     transition: 0.3s;
 }
 
-/* CONTEÚDO */
+/* Conteúdo dentro do menu */
 
 .content {
     padding: 80px 40px;
@@ -35,7 +35,7 @@ body {
     line-height: 1.7;
 }
 
-/* BOTÃO */
+/* Botão flutuante */
 
 .accessibility-btn {
 
@@ -69,7 +69,7 @@ body {
     transform: scale(1.06);
 }
 
-/* POPUP */
+/* Menu Pop-Up */
 
 .accessibility-popup {
 
@@ -114,7 +114,7 @@ body {
 
 }
 
-/* HEADER */
+/* Header */
 
 .popup-header {
 
@@ -147,9 +147,9 @@ body {
 
 .close-btn:hover {
     background: #dadada;
-}
+} /* Fim do header */
 
-/* OPÇÕES */
+/* Opções */
 
 .option {
 
@@ -164,7 +164,7 @@ body {
 
 }
 
-/* SWITCH */
+/* Switch */
 
 .switch {
     position: relative;
@@ -218,7 +218,7 @@ body {
     transform: translateX(22px);
 }
 
-/* TEXTO */
+/* Tamanho do texto */
 
 .font-box {
     padding: 18px 0;
@@ -260,7 +260,7 @@ body {
     cursor: pointer;
 }
 
-/* SELECT */
+/* Seletor de filtro */
 
 .filter-section {
     margin-top: 10px;
@@ -288,7 +288,7 @@ body {
     cursor: pointer;
 }
 
-/* CORES */
+/* Cores para o filtro */
 
 .colorblind-section {
     margin-top: 20px;
@@ -351,7 +351,7 @@ body {
     background: #ffd60a;
 }
 
-/* MODO ESCURO */
+/* Modo escuro */
 
 body.dark-mode {
     background: #111;
@@ -379,14 +379,14 @@ body.dark-mode .color-item {
     background: rgba(255,255,255,0.08);
 }
 
-/* CONTRASTE */
+/* Contraste */
 
 body.high-contrast {
     background: black;
     color: yellow;
 }
 
-/* REDUZIR ANIMAÇÃO */
+/* Reduzir animação/Zerar */
 
 body.reduce-motion * {
     transition: none !important;
